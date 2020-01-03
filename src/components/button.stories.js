@@ -2,8 +2,9 @@ import React from "react";
 import { Button } from "@storybook/react/demo";
 import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
-import App from "../.././App";
-import Progressbar from "../.././Progressbar";
+import App from ".././App";
+import Progressbar from ".././Progressbar";
+import UserDetails from "./UserDetails";
 export default { title: "Button" };
 export const withText = () => (
   <Button onClick={action("button-click")}>Hello World!</Button>
@@ -35,5 +36,10 @@ storiesOf("Demo", module).add("testing", () => {
 storiesOf("Progress", module).add("progress", () => {
   return (
       <Progressbar />
+  );
+});
+storiesOf("Addition", module).add("Addition", () => {
+  return (
+      <UserDetails />
   );
 });
